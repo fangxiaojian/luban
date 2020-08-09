@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd"
+       default-autowire="byName"
+>
+
+<!--    扫描注解
+    使用context 开启扫描注解后，xml的bean可以找到注解定义的类
+    @Component("dao")
+
+    注解与xml同时使用
+-->
+<!--    <context:component-scan base-package="com.luban" />-->
+
+<!--    <bean id="dao00" name="dao000" class="com.luban.dao.IndexDaoImpl0">-->
+<!--&lt;!&ndash;        Impl类中的成员属性赋值&ndash;&gt;-->
+<!--        <property name="str" value="dao00"></property>-->
+<!--    </bean>-->
+
+<!--    <bean id="dao01" name="dao001" class="com.luban.dao.IndexDaoImpl01">-->
+<!--        &lt;!&ndash;        Impl类中的成员属性赋值&ndash;&gt;-->
+<!--        <property name="str" value="dao01"></property>-->
+<!--    </bean>-->
+
+<!-- 可以使用 p 命令给类中的成员属性赋值-->
+<!--    <bean id="dao" class="com.luban.dao.IndexDaoImpl" p:str="xiaojian"/>-->
+
+<!--  可以使用 c 命令给service指定依赖对象-->
+<!--    <bean id="service" class="com.luban.service.IndexService" c:dao-ref="dao" />-->
+
+<!--    <bean id="service0" class="com.luban.service.IndexService0">-->
+<!--        &lt;!&ndash;        默认使用setting构造方法&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="dao" ref="dao"></property>&ndash;&gt;-->
+<!--&lt;!&ndash;        使用constructor-arg子标签，来指定构造函数的参数   &ndash;&gt;-->
+<!--        <constructor-arg ref="dao"></constructor-arg>-->
+<!--    </bean>-->
+</beans>
