@@ -1,8 +1,8 @@
 package com.google;
-import com.luban.dao.UserDao;
-public class $Proxy implements UserDao{
-	private UserDao target;
-	public $Proxy(UserDao target){
+import com.luban.dao.XiaoJianUserDao;
+public class $Proxy implements XiaoJianUserDao{
+	private XiaoJianUserDao target;
+	public $Proxy(XiaoJianUserDao target){
 		this.target = target;
 	}
 	@Override
@@ -11,8 +11,8 @@ public class $Proxy implements UserDao{
 		target.query();
 	}
 	@Override
-	public void query(String p) {
+	public java.lang.String query(String p) {
 		System.out.println(" log ");
-		target.query(p);
+		return target.query(p);
 	}
 }

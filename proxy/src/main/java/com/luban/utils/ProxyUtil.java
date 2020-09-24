@@ -1,20 +1,14 @@
 package com.luban.utils;
 
-import com.luban.dao.UserDao;
-import com.luban.dao.UserDaoImpl;
-
 import javax.tools.JavaCompiler;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author 小贱
