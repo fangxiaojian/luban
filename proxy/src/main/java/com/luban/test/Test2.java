@@ -13,13 +13,13 @@ import com.luban.utils.ProxyUtil;
  */
 public class Test2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 //        UserDao proxy = (UserDao) ProxyUtil.newInstance(new UserDaoImpl());
 //        proxy.query();
 //        proxy.query("xiaojian");
 
         XiaoJianUserDao dao = (XiaoJianUserDao) ProxyUtil.newInstance(new XiaoJianUserDaoImpl());
         dao.query();
-        System.out.println(dao.query("xiaojian"));
+//        System.out.println(dao.query("xiaojian"));
     }
 }
