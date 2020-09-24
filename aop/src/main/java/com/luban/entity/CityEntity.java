@@ -6,9 +6,8 @@ import com.luban.anno.Entity;
  * @author 小贱
  * @create 2020-05-26 17:04
  */
-@Entity(value = "city")
+@Entity(value = "city", name = "cityEntity")
 public class CityEntity {
-
     private String id;
     private String name;
     private String userName;

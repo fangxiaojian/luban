@@ -10,6 +10,8 @@
   <modules>
     <module>aop</module>
     <module>springIoc</module>
+    <module>volatileDemo</module>
+      <module>proxy</module>
   </modules>
   <packaging>pom</packaging>
 

@@ -10,6 +10,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @Configuration
 @ComponentScan("com")
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy // 开启 AspectJ 语法支持
 public class Appconfig {
 }
