@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    1. 哪些类需要我来关联
+    2. 怎么告诉我这些类
+    3. 怎么维护依赖关系（setter、constructor）
+    4. 怎么体现setter或者constructor
+-->
+
+<beans default-autowire="byType">
+    <bean id="dao" class="com.luban.dao.UserDaoImpl"></bean>
+    <bean id="dao1" class="com.luban.dao.UserDaoImpl1"></bean>
+
+    <bean id="service" class="com.luban.service.UserServiceImpl">
+        <!-- setter -->
+        <property name="dao" ref="dao"></property>
+
+        <!-- constructor -->
+<!--        <constructor-arg name="dao" ref="dao"></constructor-arg>-->
+    </bean>
+
+
+</beans>

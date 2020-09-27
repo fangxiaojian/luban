@@ -1,5 +1,7 @@
 package com.luban.test;
 
+import com.luban.dao.UserDao;
+import com.luban.dao.UserDaoImpl;
 import com.luban.dao.XiaoJianUserDao;
 import com.luban.dao.XiaoJianUserDaoImpl;
 import com.luban.utils.LubanInvocationHandler;
@@ -26,7 +28,7 @@ public class Test3 {
         System.out.println(dao.query1("xiaojian"));
         System.out.println(dao.query("xiaojian", 10));
 
-//        byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy1", new Class[]{XiaoJianUserDao.class});
+//        byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy1", new Class[]{UserDao.class});
 //        File file = new File("/Users/xiaojian/IDEAWorkspace/luban/proxy/src/main/java/com/google/$Proxy1.class");
 //        FileOutputStream fileOutputStream = new FileOutputStream(file);
 //        try {
@@ -40,12 +42,12 @@ public class Test3 {
 //            e.printStackTrace();
 //        }
 
-        XiaoJianUserDao jdkProxy = (XiaoJianUserDao) Proxy.newProxyInstance(Test3.class.getClassLoader(),
-                                                                            new Class[]{XiaoJianUserDao.class},
-                                                                            new LubanInvocationHandler(new XiaoJianUserDaoImpl()));
+        UserDao jdkProxy = (UserDao) Proxy.newProxyInstance(Test3.class.getClassLoader(),
+                                                                            new Class[]{UserDao.class},
+                                                                            new LubanInvocationHandler(new UserDaoImpl()));
 
         // jdkProxy 调用方法  是通过 InvocationHandler.invoke() 方法实现的
         jdkProxy.query();
-        System.out.println(jdkProxy.query1("xiaojian"));
+        jdkProxy.query("xiaojian");
     }
 }

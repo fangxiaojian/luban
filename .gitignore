@@ -1,2 +1,8 @@
 /.idea/*
 /out/*
+
+/aop/target/*
+/lubanSpring/target/*
+/proxy/target/*
+/springIoc/target/*
+/volatileDemo/target/*
