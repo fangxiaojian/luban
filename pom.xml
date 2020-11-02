@@ -13,6 +13,11 @@
     <module>volatileDemo</module>
       <module>proxy</module>
       <module>lubanSpring</module>
+      <module>springLog</module>
+      <module>springMybatis</module>
+      <module>simple-websocket</module>
+      <module>boot-webscket</module>
+      <module>lubanTx</module>
   </modules>
   <packaging>pom</packaging>
 
